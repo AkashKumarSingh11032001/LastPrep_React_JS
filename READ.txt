@@ -1,0 +1,6 @@
+1. Way to create React Apps
+   - npx create-react-app my-app [outdate way]
+     npm run start
+   - npm create vite@latest
+     npm install
+     npm run dev
