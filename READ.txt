@@ -4,3 +4,23 @@
    - npm create vite@latest
      npm install
      npm run dev
+
+2. React flow and structure
+   - index.js
+   - App.js
+   - components
+     - Navbar.js
+     - Main.js
+     - Footer.js
+
+3. React Router
+   - npm install react-router-dom
+   - import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+   - import Navbar from './components/Navbar';
+   - import Main from './components/Main';
+   - import Footer from './components/Footer';
+   - import About from './components/About';
+   - import Contact from './components/Contact';
+   - import Error from './components/Error';
+
+4. 
