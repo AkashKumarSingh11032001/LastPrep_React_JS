@@ -29,7 +29,7 @@ const reactElement = {
     href: "https://www.google.com",
     target: "_blank",
   },
-  children: "Click Here to Redirect to Google",
+  children: "Click Here to Redirect to G oogle",
 };
 
 const root = document.querySelector("#root");
