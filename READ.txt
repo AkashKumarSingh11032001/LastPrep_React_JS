@@ -23,78 +23,34 @@
    - import Contact from './components/Contact';
    - import Error from './components/Error';
 
-4. Best practices
-   - Use camelCase for component names
-      example:
-      - Navbar
-      - Main
-      - Footer
-      - About
-      - Contact
-      - Error
-   - Use PascalCase for class names
-      example:
-      - .Navbar
-      - .Main
-      - .Footer
-      - .About
-      - .Contact
-      - .Error
-   - Use kebab-case for CSS class names
-      example:
-      - .navbar
-      - .main
-      - .footer
-      - .about
-      - .contact
-      - .error
-   - Use snake_case for JavaScript variables
-      example:
-      - const navbar = <Navbar />;
-      - const main = <Main />;
-      - const footer = <Footer />;
-      - const about = <About />;
-      - const contact = <Contact />;
-      - const error = <Error />;
-   - Use snake_case for JavaScript constants
-      example:
-      - const NAVBAR = <Navbar />;
-      - const MAIN = <Main />;
-      - const FOOTER = <Footer />;
-      - const ABOUT = <About />;
-      - const CONTACT = <Contact />;
-      - const ERROR = <Error />;
-   - Use camelCase for JavaScript functions
-      example:
-      - function navbar() {
-      - function main() {
-      - function footer() {
-      - function about() {
-      - function contact() {
-      - function error() {
-   - Use camelCase for JavaScript event handlers
-      example:
-      - function handleClick() {
-      - function handleChange() {
-      - function handleFocus() {
-      - function handleBlur() {
-      - function handleKeyPress() {
-   - Use camelCase for JavaScript state variables
-      example:
-      - const [name, setName] = useState('');
-      - const [email, setEmail] = useState('');
-   - Use PascalCase for JavaScript classes
-      example:
-      - class Navbar extends React.Component {
-      - class Main extends React.Component {
-      - class Footer extends React.Component {
-      - class About extends React.Component {
-      - class Contact extends React.Component {
-      - class Error extends React.Component {
-   - Use camelCase for JavaScript modules
-      example:
-      - import { useState } from 'react';
-      - import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-      - import Navbar from './components/Navbar';
-      - import Main from './components/Main';
-      - import Footer from './components/Footer';
+4. Virtual DOM
+   - React creates a virtual DOM
+   - React compares the virtual DOM to the real DOM
+   - React updates the real DOM to match the virtual DOM
+
+5. React Fiber
+   - React Fiber is a reimplementation of React's core algorithm
+   - React Fiber is a new architecture for React
+   - React Fiber is a new way to build user interfaces
+   - React Fiber is a new way to handle state changes
+
+6. Reconciliation
+   - Reconciliation is the process of comparing the virtual DOM to the real DOM
+   - Reconciliation is a way to optimize the performance of React
+   - Reconciliation is a way to make React faster
+   - Reconciliation is a way to make React more efficient
+
+7. React Hooks
+   - useState
+   - useEffect
+   - useContext
+   - useReducer
+   - useCallback
+   - useMemo
+   - useRef 
+   - useImperativeHandle
+   - useLayoutEffect
+   - useDebugValue 
+
+7. React Context
+   - React Context is a way to pass data through the component tree without having to pass props down manually at every level.
