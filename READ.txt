@@ -54,3 +54,20 @@
 
 7. React Context
    - React Context is a way to pass data through the component tree without having to pass props down manually at every level.
+
+8. Interview Question -- React Specific
+   - unoptimized way
+      const addValue = () => {
+         setCounter(counter + 1);
+         setCounter(counter + 1);
+         setCounter(counter + 1);
+         setCounter(counter + 1);
+      };
+   - Optimized way [prevCounter give the prev current count value]
+      const addValue = () => {
+         setCounter((prevCounter) => prevCounter + 1);
+         setCounter((prevCounter) => prevCounter + 1);
+         setCounter((prevCounter) => prevCounter + 1);
+         setCounter((prevCounter) => prevCounter + 1);
+      };
+   - DO Run both the scenerio
