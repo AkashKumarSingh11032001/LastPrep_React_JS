@@ -1,4 +1,4 @@
-import { useState, useCallback } from "react";
+import { useState, useCallback, useEffect } from "react";
 
 function App() {
   const [length, setLength] = useState(8);
@@ -25,6 +25,12 @@ function App() {
 
     setPassword(password);
   }, [length, numberAllowed, symbolsAllowed, setPassword]);
+
+
+  useEffect(()=>{
+    passwordGenerator()
+  },[length,numberAllowed,symbolsAllowed,passwordGenerator])
+
 
   return (
     <div className="w-full max-w-md mx-auto shadow-md rounded-lg px-4 py-3 my-8 bg-gray-800 text-orange-500">
@@ -77,7 +83,7 @@ function App() {
             defaultChecked={symbolsAllowed}
             id="characterInput"
             onChange={() => {
-              setCharAllowed((prev) => !prev);
+              setSymbolsAllowed((prev) => !prev);
             }}
           />
           <label htmlFor="characterInput">Characters</label>
