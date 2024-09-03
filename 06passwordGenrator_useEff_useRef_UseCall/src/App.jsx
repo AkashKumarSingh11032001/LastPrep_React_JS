@@ -27,14 +27,15 @@ function App() {
   }, [length, numberAllowed, symbolsAllowed, setPassword]);
 
 
-  useEffect(()=>{
-    passwordGenerator()
-  },[length,numberAllowed,symbolsAllowed,passwordGenerator])
-
+  useEffect(() => {
+    passwordGenerator();
+  }, [length, numberAllowed, symbolsAllowed,passwordGenerator]);
 
   return (
     <div className="w-full max-w-md mx-auto shadow-md rounded-lg px-4 py-3 my-8 bg-gray-800 text-orange-500">
+      {/* PROJECT HEADING */}
       <h1 className="text-white text-center my-3">Password generator</h1>
+      {/* PASSWORD & COPY BUTTON */}
       <div className="flex shadow rounded-lg overflow-hidden mb-4">
         <input
           type="text"
@@ -53,6 +54,7 @@ function App() {
       </div>
 
       <div className="flex text-sm gap-x-2">
+        {/* SLIDER */}
         <div className="flex items-center gap-x-1">
           <input
             type="range"
@@ -66,6 +68,7 @@ function App() {
           />
           <label>Length: {length}</label>
         </div>
+        {/* NUMBER ALLOWED */}
         <div className="flex items-center gap-x-1">
           <input
             type="checkbox"
@@ -77,6 +80,7 @@ function App() {
           />
           <label htmlFor="numberInput">Numbers</label>
         </div>
+        {/* SYMBOL ALLOWED */}
         <div className="flex items-center gap-x-1">
           <input
             type="checkbox"
