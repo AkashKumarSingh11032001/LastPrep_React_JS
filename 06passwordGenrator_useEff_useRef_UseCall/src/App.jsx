@@ -1,35 +1,50 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState, useCallback } from "react";
+import reactLogo from "./assets/react.svg";
+import viteLogo from "/vite.svg";
+import "./App.css";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [length, setLength] = useState(8);
+  const [numberAllowed, setNumberAllowed] = useState(false);
+  const [symbolsAllowed, setSymbolsAllowed] = useState(false);
+  const [password, setPassword] = useState("");
+
+  const passwordGenerator = useCallback(() => {
+    let password = "";
+    let strX = "";
+
+    const characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+    const numX = "0123456789";
+    const symbolX = "!@#$%^&*()_+~`|}{[]:;?><,./-=";
+
+    if (numberAllowed) strX += numX;
+    if (symbolsAllowed) strX += symbolX;
+    strX += characters;
+
+    for (let i = 0; i < length; i++) {
+      let char = Math.floor(Math.random() * strX.length + 1);
+      password += strX.charAt(char);
+    }
+
+    setPassword(password);
+  }, [length, numberAllowed, symbolsAllowed, setPassword]);
 
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+      <h1 className="text-4xl text-center text-white">Password Generator</h1>
+      <div className="w-full max-w-md mx-auto shadow-md rounded-lg px-4 my-8 text-orange-500 bg-gray-700">
+        <div className="flex shadow rounded-lg overflow-hidden mb-4">
+          <input
+            type="text"
+            className="w-full py-1 outline-none"
+            value={password}
+            placeholder="password"
+            readOnly
+          />
+        </div>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
