@@ -24,3 +24,5 @@ function useCurrencyInfo(currency){
         })
     }, [currencyInfo])
 }
+
+//-> Explain useEffect() in lamen term or easy to understand term? 
