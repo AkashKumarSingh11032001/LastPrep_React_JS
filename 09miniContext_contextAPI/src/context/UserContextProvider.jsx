@@ -2,19 +2,10 @@ import React from "react";
 import UserContext from "./UserContext";
 
 const UserContextProvider = ({ children }) => {
-  const userdata = {
-    name: "John Doe",
-    email: "johndoe@example.com",
-    age: 30,
-  };
-  const [user, setUser] = React.useState(userdata);
-
-  const updateUser = (newUser) => {
-    setUser(newUser);
-  };
+  const [user, setUser] = React.useState(null);
 
   return (
-    <UserContext.Provider value={{ user, updateUser }}>
+    <UserContext.Provider value={{ user, setUser }}>
       {children}
     </UserContext.Provider>
   );
