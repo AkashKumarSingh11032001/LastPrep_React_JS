@@ -17,6 +17,8 @@ function App() {
   // acctual change in theam
   useEffect(() => {
     document.querySelector("html").classList.remove("light", "dark");
+    console.log(theamMode);
+    
     document.querySelector("html").classList.add(theamMode);
   }, [theamMode]);
 
