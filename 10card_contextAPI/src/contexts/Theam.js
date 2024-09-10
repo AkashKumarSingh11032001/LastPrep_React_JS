@@ -1,11 +1,11 @@
 import React from "react";
 import { useContext } from "react";
-import { createContext, useState } from "react";
+import { createContext } from "react";
 
 export const TheamContext = createContext({
   theamMode: "light",
   darkTheam: () => {},
-  lightThean: () => {},
+  lightTheam: () => {},
 });
 
 export const TheamProvider = TheamContext.Provider;
