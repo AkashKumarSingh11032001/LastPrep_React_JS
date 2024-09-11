@@ -74,3 +74,13 @@ export class AuthService {
 const authService = new AuthService();
 
 export default authService;
+
+
+/* step to auth appwrite backend services
+    1. intilizating the client
+    2. intilizating the account -- in constructor because it will be called every time and will define many crospponding helping methods.
+    3. create account use [this.account.create]
+    4. login use [this.account.createEmailSession]
+    5. logout use [this.account.deleteSession]
+    6. getCurrentUser use [this.account.get]
+*/
