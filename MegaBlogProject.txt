@@ -1,0 +1,20 @@
+1. React is front end libary, so for backend will be handle by other services.
+2. Using Appwrite for backend.
+3. TinyMCE as text editor
+4. Using tailwind css for styling.
+5. Using react-icons for icons.
+6. react-hook-forms for form handling
+
+
+2. for backend we will use node js and express js.
+3. we will use mongodb as database.
+4. we will use jwt for authentication.
+5. we will use bcrypt for password hashing.
+6. we will use multer for image upload.
+7. we will use nodemailer for email verification.
+8. we will use nodemon for development.
+9. we will use nodemailer for email verification.
+10. we will use nodemon for development.
+11. we will use nodemailer for email verification.
+12. we will use nodemon for development.
+13. we will use nodemailer for email verification.
