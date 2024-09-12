@@ -6,7 +6,6 @@ export class Service {
   databases;
   bucket;
   account;
-  storage;
 
   constructor() {
     this.client
@@ -90,11 +89,37 @@ export class Service {
       const res = await this.databases.listDocuments(
         conf.APPWRITE_DATABASE_ID,
         conf.APPWRITE_COLLECTION_ID,
-        [Query.equal("status","active")]
+        [Query.equal("status", "active")]
       );
       return res;
     } catch (error) {
       console.log("Appwrite service :: getAllPost :: error", error);
+      return false;
+    }
+  }
+
+  //   file upload
+  async uploadFile(file) {
+    try {
+      const res = await this.bucket.createFile(
+        conf.APPWRITE_BUCKET_ID,
+        ID.unique(),
+        file
+      );
+      return res;
+    } catch (error) {
+      console.log("Appwrite service :: uploadFile :: error", error);
+      return false;
+    }
+  }
+
+  //   delete file
+  async deleteFile(fileId) {
+    try {
+      const res = await this.bucket.deleteFile(conf.APPWRITE_BUCKET_ID, fileId);
+      return res;
+    } catch (error) {
+      console.log("Appwrite service :: deleteFile :: error", error);
       return false;
     }
   }
