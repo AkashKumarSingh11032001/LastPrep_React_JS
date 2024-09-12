@@ -5,6 +5,26 @@
 5. Using react-icons for icons.
 6. react-hook-forms for form handling
 
+PROJECT STEP WISE APPROCH:
+1. APPWRITE WEB CONFIGURATION (new project & setup)
+2. SETUP ENV FILE (.env & conf.js)
+3. BUILD AUTHENTICATION (auth.js) ---> using APPWRITE
+    Sign up
+    Sign in
+    Sign out
+    Active user
+4. BUILD BLOG SERVICE (config.js) ---> using APPWRITE
+    Create post
+    Update post
+    Delete post
+    get post
+    getAll post
+    file upload
+    file download
+    preview file
+5. 
+
+
 
 2. for backend we will use node js and express js.
 3. we will use mongodb as database.
