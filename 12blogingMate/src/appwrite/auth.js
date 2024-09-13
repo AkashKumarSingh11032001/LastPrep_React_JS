@@ -73,7 +73,7 @@ export class AuthService {
 
 const authService = new AuthService();
 
-export default authService;
+export default authService
 
 
 /* step to auth appwrite backend services
