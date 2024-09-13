@@ -22,7 +22,7 @@ PROJECT STEP WISE APPROCH:
     file upload
     file download
     preview file
-5. 
+5. SETUP REDUX-TOOLKIT
 
 
 
