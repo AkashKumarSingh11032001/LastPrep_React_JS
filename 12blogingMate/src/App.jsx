@@ -25,11 +25,13 @@ function App() {
       .finally(() => setLoading(false));
   }, []);
 
-  return (
-    <>
-      <h1>Blogging Application</h1>
-    </>
-  );
+  return !loading ? (
+    <div className="App">
+      <h1>Bloging Mate</h1>
+    </div>
+  ) : (
+    <div>Loading...</div>
+  ) : null
 }
 
 export default App;
