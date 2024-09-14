@@ -23,6 +23,9 @@ PROJECT STEP WISE APPROCH:
     file download
     preview file
 5. SETUP REDUX-TOOLKIT
+    Create store and call reducer in it ---> (store.js)
+    create reducer ---> (authSlice.js)
+    encapsulate <App /> with store ---> (main.jsx) 
 
 
 
